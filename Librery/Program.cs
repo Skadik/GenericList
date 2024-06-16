@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Librery.Generic;
+using System;
 
 namespace Librery
 {
@@ -10,6 +7,14 @@ namespace Librery
     {
         static void Main(string[] args)
         {
+            List<string> list = new List<string>();
+            list.Add("Арубз");
+            list.Add("Груша");
+            list.Add("Волос");
+            list.Add("Сорочка");
+            list.Remove(3);
+            Console.WriteLine(list.getItem(2));
+            
         }
     }
 }
