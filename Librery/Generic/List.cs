@@ -1,11 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace Librery.Generic
 {
-    public class List<T> where T : IComparable <T> //, IEnumerable <T>
+    public class List<T> where T : IComparable <T>
     {
         private T[] list;
+
 
         public List()
         {
@@ -63,7 +63,7 @@ namespace Librery.Generic
         }
 
 
-        private void extension()
+        private void extension() //Розширює масив
         {
             T[] cash = list;
             list = new T[cash.Length + 1];
@@ -73,7 +73,7 @@ namespace Librery.Generic
             }
         }
 
-        private void compression()
+        private void compression() //зжимає масив
         {
             T[] cash = list;
             list = new T[cash.Length - 1];
@@ -81,6 +81,11 @@ namespace Librery.Generic
             {
                 list[i] = cash[i];
             }
+        }
+
+        internal object ToArray()
+        {
+            throw new NotImplementedException();
         }
     }
 }
